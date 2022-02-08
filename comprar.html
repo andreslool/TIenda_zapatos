@@ -1,0 +1,50 @@
+<!-- escribe aqui si vas a decir algo: -->
+<!-- Aquí puedes escribir tu comentario -->
+<!-- Aquí puedes escribir tu comentario -->
+<!-- Aquí puedes escribir tu comentario -->
+
+<!-- copia el codigo de aqui, para abajo -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Factura</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,700i|Open+Sans:400,700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="estilos.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css"/>
+         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.js"></script>
+<script>
+function alerta_hecho(){
+ swal({
+   title: "¡HECHO!",
+   text: "compra realizada con exito",
+   type: "success",
+ });
+}                   
+</script>
+    </head>
+    <body>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <form>    
+                    <input name="nombre" type="text" id="nombre" placeholder="Nombre" maxlength="30" pattern="[a-zA-Z0-9]+" required autofocus/>
+          <input name="Apellido" type="text" id="apellido" placeholder="Apellido" maxlength="30" pattern="[a-zA-Z0-9]+" required autofocus/>
+                    <input name="telefono" type="tel" id="telefono" placeholder="Telefono" required />  
+          <input name="cuenta" type="tel" id="cuenta" placeholder="Número de transferencia" required />
+            <textarea name="consulta" id="comentario" placeholder="¿Te gusto nuestro producto? Dejanos tu comentario..." rows="6" required></textarea>
+            <button id="bueno" name="bueno" onclick="alerta_hecho();borrarcompra();" class="btn">COMPRAR</button>
+        </form> 
+    </body>
+    <footer>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</html>
